@@ -1,0 +1,53 @@
+/* 
+  Localizable.strings
+  MyLocalizedApp
+
+  Created by Sergey Kargopolov on 2016-03-06.
+  Copyright © 2016 Sergey Kargopolov. All rights reserved.
+*/
+
+
+
+
+
+//Label
+
+
+"Error" = "Error";
+"Quickly Signup With:" = "Quickly Signup With:";
+"Pickup Your Picture for last step Registration" = "";
+
+//End Label
+
+//Button
+
+"Sign In" = "Sign In";
+"Signup" = "Signup";
+"Contact Us" = "Contact Us";
+"Forgot Password" = "Forgot Password";
+"Or use your email:" = "Or use your email:";
+"Back" = "Or use your email:";
+"Create Account" = "Create Account";
+"Next" = "Next";
+"Log In" = "Log In";
+"Submit" = "";
+
+//End Button
+
+//Form field
+"Email:" = "Email:";
+"Password:" = "Password:";
+"Height" = "Height";
+"Weight" = "Weight";
+"Birthday" = "Birthday";
+"Gender" = "Gender";
+"" = "";
+
+
+"" = "";
+"" = "";
+"" = "";
+
+//Form Field
+
+

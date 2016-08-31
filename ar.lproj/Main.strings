@@ -1,0 +1,159 @@
+
+/* Class = "UITextField"; placeholder = "Email:"; ObjectID = "0jT-GR-18x"; */
+"0jT-GR-18x.placeholder" = "Email:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "10I-Xf-V9K"; */
+"10I-Xf-V9K.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "2rz-GU-p0X"; */
+"2rz-GU-p0X.normalTitle" = "Cancel";
+
+/* Class = "UIButton"; normalTitle = "Sign In"; ObjectID = "3FW-4C-bG5"; */
+"3FW-4C-bG5.normalTitle" = "Sign In";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "4dX-AK-DIh"; */
+"4dX-AK-DIh.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "4kQ-az-psZ"; */
+"4kQ-az-psZ.normalTitle" = "Cancel";
+
+/* Class = "UITextField"; placeholder = "Email:"; ObjectID = "6jZ-DH-Xp7"; */
+"6jZ-DH-Xp7.placeholder" = "Email:";
+
+/* Class = "UINavigationItem"; title = "Contact Us"; ObjectID = "9Td-yD-sWU"; */
+"9Td-yD-sWU.title" = "Contact Us";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "AFg-rT-qgq"; */
+"AFg-rT-qgq.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Gender"; ObjectID = "AJr-hB-xLV"; */
+"AJr-hB-xLV.placeholder" = "Gender";
+
+/* Class = "UITextField"; text = "female"; ObjectID = "AJr-hB-xLV"; */
+"AJr-hB-xLV.text" = "female";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "B0V-OE-eXE"; */
+"B0V-OE-eXE.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Create Account"; ObjectID = "Bdd-Ye-Ued"; */
+"Bdd-Ye-Ued.normalTitle" = "Create Account";
+
+/* Class = "UIButton"; normalTitle = "Contact Us"; ObjectID = "DOK-Gc-K2a"; */
+"DOK-Gc-K2a.normalTitle" = "Contact Us";
+
+/* Class = "UINavigationItem"; title = "Forget Password"; ObjectID = "Deh-H0-vUU"; */
+"Deh-H0-vUU.title" = "Forget Password";
+
+/* Class = "UITextField"; placeholder = "Email:"; ObjectID = "Dyl-SK-0mI"; */
+"Dyl-SK-0mI.placeholder" = "Email:";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "FGt-Uq-IgI"; */
+"FGt-Uq-IgI.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "G3c-Mu-FLL"; */
+"G3c-Mu-FLL.placeholder" = "Username";
+
+/* Class = "UIButton"; normalTitle = "Change Photo"; ObjectID = "GAe-HT-wrY"; */
+"GAe-HT-wrY.normalTitle" = "Change Photo";
+
+/* Class = "UINavigationItem"; title = "Sign in"; ObjectID = "IR9-is-QDY"; */
+"IR9-is-QDY.title" = "Sign in";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "Ncq-9c-Na4"; */
+"Ncq-9c-Na4.placeholder" = "Password";
+
+/* Class = "UITextField"; text = "ilham123"; ObjectID = "Ncq-9c-Na4"; */
+"Ncq-9c-Na4.text" = "ilham123";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "O9W-Rg-OX3"; */
+"O9W-Rg-OX3.normalTitle" = "NEXT";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "QDN-w2-POd"; */
+"QDN-w2-POd.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Quickly Log In With :"; ObjectID = "Qdr-1y-qs2"; */
+"Qdr-1y-qs2.text" = "Quickly Log In With :";
+
+/* Class = "UIButton"; normalTitle = "Kirim"; ObjectID = "QhL-cf-765"; */
+"QhL-cf-765.normalTitle" = "Kirim";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "Twc-To-hHS"; */
+"Twc-To-hHS.normalTitle" = "Submit";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "XxR-9G-A4b"; */
+"XxR-9G-A4b.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "a0D-4n-NGV"; */
+"a0D-4n-NGV.title" = "Back";
+
+/* Class = "UITextField"; placeholder = "Lastname"; ObjectID = "adv-SL-xGx"; */
+"adv-SL-xGx.placeholder" = "Lastname";
+
+/* Class = "UITextField"; placeholder = "Birthday"; ObjectID = "b2D-c0-eID"; */
+"b2D-c0-eID.placeholder" = "Birthday";
+
+/* Class = "UITextField"; text = "1997-12-08"; ObjectID = "b2D-c0-eID"; */
+"b2D-c0-eID.text" = "1997-12-08";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "dPZ-qd-kz5"; */
+"dPZ-qd-kz5.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "FIrstname"; ObjectID = "gDh-Xq-Uos"; */
+"gDh-Xq-Uos.placeholder" = "FIrstname";
+
+/* Class = "UITextField"; text = "ilham test"; ObjectID = "gDh-Xq-Uos"; */
+"gDh-Xq-Uos.text" = "ilham test";
+
+/* Class = "UIButton"; normalTitle = "Forget Password"; ObjectID = "hGe-ZH-zE4"; */
+"hGe-ZH-zE4.normalTitle" = "Forget Password";
+
+/* Class = "UIBarButtonItem"; title = "back"; ObjectID = "hgb-gs-4Pt"; */
+"hgb-gs-4Pt.title" = "back";
+
+/* Class = "UITextField"; placeholder = "Height"; ObjectID = "hhf-LV-Yuh"; */
+"hhf-LV-Yuh.placeholder" = "Height";
+
+/* Class = "UITextField"; text = "169"; ObjectID = "hhf-LV-Yuh"; */
+"hhf-LV-Yuh.text" = "169";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "nDm-56-vtT"; */
+"nDm-56-vtT.normalTitle" = "Login";
+
+/* Class = "UILabel"; text = "Quickly Log In With :"; ObjectID = "nvv-He-I77"; */
+"nvv-He-I77.text" = "Quickly Log In With :";
+
+/* Class = "UINavigationItem"; title = "Pay4date"; ObjectID = "oFM-Xe-qAQ"; */
+"oFM-Xe-qAQ.title" = "Pay4date";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "oqr-vX-jaw"; */
+"oqr-vX-jaw.title" = "Back";
+
+/* Class = "UITextField"; placeholder = "Weigth"; ObjectID = "pqJ-pb-LUT"; */
+"pqJ-pb-LUT.placeholder" = "Weigth";
+
+/* Class = "UITextField"; text = "65"; ObjectID = "pqJ-pb-LUT"; */
+"pqJ-pb-LUT.text" = "65";
+
+/* Class = "UIViewController"; title = "Contact US"; ObjectID = "qST-Am-6SL"; */
+"qST-Am-6SL.title" = "Contact US";
+
+/* Class = "UIButton"; normalTitle = "Logout"; ObjectID = "qad-CZ-cqe"; */
+"qad-CZ-cqe.normalTitle" = "Logout";
+
+/* Class = "UITextField"; text = "password"; ObjectID = "r8D-mz-CpT"; */
+"r8D-mz-CpT.text" = "password";
+
+/* Class = "UITextField"; text = "waldiirawan"; ObjectID = "rHv-LB-3pa"; */
+"rHv-LB-3pa.text" = "waldiirawan";
+
+/* Class = "UINavigationItem"; title = "SignUp"; ObjectID = "sRJ-Xj-zK7"; */
+"sRJ-Xj-zK7.title" = "SignUp";
+
+/* Class = "UILabel"; text = "Or use your Email"; ObjectID = "tGK-3c-RnS"; */
+"tGK-3c-RnS.text" = "Or use your Email";
+
+/* Class = "UIButton"; normalTitle = "Kirim"; ObjectID = "uqX-Vf-Vz2"; */
+"uqX-Vf-Vz2.normalTitle" = "Kirim";
+
+/* Class = "UILabel"; text = "Or use your Email"; ObjectID = "yte-Sd-iZS"; */
+"yte-Sd-iZS.text" = "Or use your Email";
