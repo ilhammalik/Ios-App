@@ -561,6 +561,7 @@
                         <outlet property="sortView" destination="tmu-WF-hIs" id="Gmy-su-gfr"/>
                         <outlet property="usernameLabel" destination="AeM-WR-xZy" id="OmK-Dx-p3p"/>
                         <outlet property="viewEdit" destination="V2U-hv-Mf1" id="5lX-Zt-qFq"/>
+                        <outlet property="viewSearch" destination="IcN-07-iql" id="TeA-0X-Evc"/>
                         <segue destination="ioe-SW-E3j" kind="push" identifier="showMenuSegue" id="Aky-qp-WGU"/>
                     </connections>
                 </viewController>

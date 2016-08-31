@@ -27,7 +27,6 @@ import RealmSwift
     @IBOutlet var PlusviewOpen: UIView!
     @IBOutlet var PlusviewHide: UIView!
     @IBOutlet var viewEdit: UIView!
-    @IBOutlet var viewPlus: UIView!
     @IBOutlet var viewSearch: UIView!
     
     
@@ -117,30 +116,53 @@ import RealmSwift
         createJob.action = { item in
             
             print("Create Job...")
+            let vc = ProfileController(nibName: "Profile", bundle: nil)
+            var navb = UINavigationController(rootViewController: vc)
+            self.presentViewController(navb, animated:true, completion:nil)
         }
         
         let search = ActionButtonItem(title: "Search", image: plusImage)
         search.action = { item in
             print("search...")
+            print("Create Job...")
+            let vc = ProfileController(nibName: "Profile", bundle: nil)
+            var navb = UINavigationController(rootViewController: vc)
+            self.presentViewController(navb, animated:true, completion:nil)
+
         }
         
         let chat = ActionButtonItem(title: "Chat", image: plusImage)
         chat.action = { item in
             
             print("chat...")
+            print("Create Job...")
+            let vc = ProfileController(nibName: "Profile", bundle: nil)
+            var navb = UINavigationController(rootViewController: vc)
+            self.presentViewController(navb, animated:true, completion:nil)
+
         }
         
         
         let photo = ActionButtonItem(title: "Photo", image: plusImage)
         photo.action = { item in
             print("photo...")
+            print("Create Job...")
+            let vc = ProfileController(nibName: "Profile", bundle: nil)
+            var navb = UINavigationController(rootViewController: vc)
+            self.presentViewController(navb, animated:true, completion:nil)
+
         
         }
         
         
         let profile = ActionButtonItem(title: "Profile", image: plusImage)
         profile.action = { item in
-            print("Google Plus...")
+            print("profile")
+            let vc = ProfileController(nibName: "Profile", bundle: nil)
+            var navb = UINavigationController(rootViewController: vc)
+            self.presentViewController(navb, animated:true, completion:nil)
+            
+
         }
         
         
