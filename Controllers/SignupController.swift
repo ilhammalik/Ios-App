@@ -32,7 +32,7 @@ class SignupController: UIViewController,UITextFieldDelegate, UINavigationContro
     
     //end checklist
     
-    
+    @IBOutlet var logo: UIImageView!
     @IBOutlet var firstname : UITextField!
     @IBOutlet var lastname : UITextField!
     @IBOutlet var username : UITextField!
@@ -53,7 +53,7 @@ class SignupController: UIViewController,UITextFieldDelegate, UINavigationContro
     @IBOutlet var scrolView : UIScrollView!
     
     
-    var data = ["male", "female"]
+    var data = ["Male", "Female"]
     var pickers = UIPickerView()
     
     
@@ -96,6 +96,10 @@ class SignupController: UIViewController,UITextFieldDelegate, UINavigationContro
         
         gender.inputView = pickers
         
+        self.logo.layer.cornerRadius = self.logo.frame.height/2
+        self.logo.layer.borderWidth = 5
+        self.logo.layer.masksToBounds = true
+        self.logo.layer.borderColor = UIColor.purpleColor().CGColor
         // Do any additional setup after loading the view, typically from a nib.
         
         //Layout Iphone 4s
@@ -106,7 +110,7 @@ class SignupController: UIViewController,UITextFieldDelegate, UINavigationContro
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
         // dismissKeyboard
         
-
+        
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
@@ -116,14 +120,14 @@ class SignupController: UIViewController,UITextFieldDelegate, UINavigationContro
         
         // navgitaion title
         let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
-      
+        
         //button.addTarget(self, action: #selector(buttonAction), forControlEvents: .TouchUpInside)
         // end navigation title
         
         // scroll
         scrolView.scrollEnabled = true
         // Do any additional setup after loading the view
-        scrolView.contentSize = CGSizeMake(320, 1100)
+        scrolView.contentSize = CGSizeMake(320, 1400)
         // scroll
         navigationBar()
         
@@ -708,7 +712,7 @@ class SignupController: UIViewController,UITextFieldDelegate, UINavigationContro
     }
     
     
-
+    
     func keyboardWillShow(sender: NSNotification) {
         let userInfo: [NSObject : AnyObject] = sender.userInfo!
         
@@ -718,7 +722,9 @@ class SignupController: UIViewController,UITextFieldDelegate, UINavigationContro
         if keyboardSize.height == offset.height {
             if self.view.frame.origin.y == 0 {
                 UIView.animateWithDuration(0.1, animations: { () -> Void in
-                    self.view.frame.origin.y -= keyboardSize.height
+                    self.view.frame.origin.y -= 200
+                    print("key")
+                    print(keyboardSize.height)
                 })
             }
         } else {
@@ -728,12 +734,12 @@ class SignupController: UIViewController,UITextFieldDelegate, UINavigationContro
         }
         print(self.view.frame.origin.y)
     }
-
+    
     
     func keyboardWillHide(sender: NSNotification) {
         let userInfo: [NSObject : AnyObject] = sender.userInfo!
         let keyboardSize: CGSize = userInfo[UIKeyboardFrameBeginUserInfoKey]!.CGRectValue.size
-        self.view.frame.origin.y += keyboardSize.height
+        self.view.frame.origin.y += 200
     }
-
+    
 }
