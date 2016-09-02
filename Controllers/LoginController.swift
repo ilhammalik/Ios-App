@@ -12,7 +12,7 @@ import FBSDKCoreKit
 import Alamofire
 import SwiftyJSON
 
-class LoginController: UIViewController,UITextFieldDelegate,FBSDKLoginButtonDelegate   {
+class LoginController: UIViewController,BWWalkthroughViewControllerDelegate,UITextFieldDelegate,FBSDKLoginButtonDelegate   {
     
     //Variabel For delegate
     @IBOutlet var viewLogin : UIView!
@@ -21,6 +21,9 @@ class LoginController: UIViewController,UITextFieldDelegate,FBSDKLoginButtonDele
     @IBOutlet var signButton : UIButton!
     @IBOutlet var birthday : UITextField!
     @IBOutlet var banner : UIImageView!
+    var needWalkthrough:Bool = true
+    var walkthrough:BWWalkthroughViewController!
+    
     //End Variabel
     
     // configuration facebook
@@ -58,7 +61,7 @@ class LoginController: UIViewController,UITextFieldDelegate,FBSDKLoginButtonDele
     }
     
     func back(){
-       self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+      self.tampil()
     }
     
     
@@ -393,6 +396,28 @@ class LoginController: UIViewController,UITextFieldDelegate,FBSDKLoginButtonDele
         
     }
     
+    @IBAction func tampil(){
+        
+        let stb = UIStoryboard(name: "Walkthrough", bundle: nil)
+        walkthrough = stb.instantiateViewControllerWithIdentifier("container") as! BWWalkthroughViewController
+        let page_one = stb.instantiateViewControllerWithIdentifier("page_1")
+        let page_two = stb.instantiateViewControllerWithIdentifier("page_2")
+        let page_three = stb.instantiateViewControllerWithIdentifier("page_3")
+        
+        
+        // Attach the pages to the master
+        walkthrough.delegate = self
+        walkthrough.addViewController(page_one)
+        walkthrough.addViewController(page_two)
+        walkthrough.addViewController(page_three)
+        
+        self.presentViewController(walkthrough, animated: true) {
+            ()->() in
+            self.needWalkthrough = false
+        }
+    }
+    
+    
 //    func CheckInternet(){
 //        if Reachability.isConnectedToNetwork() == true {
 //            print("Internet connection OK")
@@ -408,6 +433,21 @@ class LoginController: UIViewController,UITextFieldDelegate,FBSDKLoginButtonDele
 //            presentViewController(alert, animated: true, completion: nil)
 //        }
 //    }
+}
+extension LoginController{
+    
+    func walkthroughCloseButtonPressed() {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func walkthroughPageDidChange(pageNumber: Int) {
+        if (self.walkthrough.numberOfPages - 1) == pageNumber{
+            self.walkthrough.closeButton?.hidden = false
+        }else{
+            self.walkthrough.closeButton?.hidden = true
+        }
+    }
+    
 }
 
 

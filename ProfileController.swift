@@ -32,6 +32,7 @@ class ProfileController: UIViewController,UIPickerViewDataSource, UIPickerViewDe
     @IBOutlet var editProfile : UIButton!
     @IBOutlet var editView : UIView!
     @IBOutlet var editProfileScroll : UIScrollView!
+    var dataPhoto: NSData?
     
     
     //edit Profile Field
@@ -70,6 +71,16 @@ class ProfileController: UIViewController,UIPickerViewDataSource, UIPickerViewDe
         //self.editView.hidden = true
         self.editProfileScroll.hidden = true
         navigationBar()
+        
+        let imgPhoto =   prefs.valueForKey("thumbnail") as? String
+        print("\(imgPhoto)")
+        
+        let url = NSURL(string:String(String(imgPhoto!)))
+        dataPhoto = NSData(contentsOfURL:url!)
+        if dataPhoto != nil {
+            photo?.image = UIImage(data:dataPhoto!)
+        }
+        
     }
     
     func navigationBar(){
@@ -299,7 +310,7 @@ class ProfileController: UIViewController,UIPickerViewDataSource, UIPickerViewDe
                     Login.setObject(result["data"]!!["gender"]!, forKey: "gender")
                     Login.setObject(String(result["data"]!!["profile"]!!["height"]!!), forKey: "height")
                     Login.setObject(String(result["data"]!!["profile"]!!["weight"]!!), forKey: "weight")
-                    Login.setObject(String(result["data"]!!["profile"]!!["description"]!!), forKey: "description")
+                    Login.setObject(String(result["data"]!!["profile_picture"]!!["url"]!!["thumbnail"]!!), forKey: "thumbnail")
                     Login.setObject(result["data"]!!["email"]!, forKey: "email")
                     Login.setObject(result["data"]!!["birthday"]!, forKey: "birthday")
                     Login.synchronize()

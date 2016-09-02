@@ -69,13 +69,16 @@ public class ActionButtonItem: NSObject {
     public init(title optionalTitle: String?, image: UIImage?) {
         super.init()
         
-        self.view = UIView(frame: CGRect(origin: CGPointZero, size: self.viewSize))
+        
+        self.view = UIView(frame: CGRect(origin: CGPointZero, size: CGSize(width: 220, height: 180)))
+        
         self.view.alpha = 0
         self.view.userInteractionEnabled = true
         self.view.backgroundColor = UIColor.clearColor()
-        
+//
         self.button = UIButton(type: .Custom)
-        self.button.frame = CGRect(origin: CGPoint(x: self.viewSize.width - self.buttonSize.width, y: -30), size: buttonSize)
+        self.button.frame = CGRect(origin: CGPoint(x: self.viewSize.width - self.buttonSize.width, y: 0), size: buttonSize)
+        
         self.button.layer.shadowOpacity = 1
         self.button.layer.shadowRadius = 2
         self.button.layer.shadowOffset = CGSize(width: 1, height: 1)

@@ -15,37 +15,42 @@ import SystemConfiguration
 let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
 let Token = prefs.valueForKey("token") as? String
 let Username = prefs.valueForKey("username") as? String
+let Key = prefs.valueForKey("key") as? String
 
 /* Header */
-   var APP_NAME = "Pay4date"
-   var AppId="4201620";
-   var SecretKey="5ednm6T7m32EVCLekXWExOVJPdhh8HSEqeMUeuhYo6j43kKPyU5jm";
-   var CacheControl = "no-cache"
-   var ContentType = "application/x-www-form-urlencoded"
+var APP_NAME = "Pay4date"
+var AppId="4201620";
+var SecretKey="5ednm6T7m32EVCLekXWExOVJPdhh8HSEqeMUeuhYo6j43kKPyU5jm";
+var CacheControl = "no-cache"
+var ContentType = "application/x-www-form-urlencoded"
 
-   var username="ilham";
-   var password="ilham123";
- /* End Header */
+var username="ilham";
+var password="ilham123";
+/* End Header */
 
-   var ApiSite="www.example.com";
-   var EmailServer=1234;
+var ApiSite="www.example.com";
+var EmailServer=1234;
 
 /* Api */
-   var IP = "http://128.199.114.161:128/";
-   var ApiLogin=IP+"/login/";
-   var ApiLoginFacebook=IP+"/login/facebook";
-   var ApiRegister=IP+"/signup";
-   var ApiCheckUsername=IP+"/checkingvalue/username/{{username}}";
-   var ApiForgetPassword=IP;
-   var ContactUs=IP;
-   var FAQ=IP;
-   var ApiBrowseJob=IP+"/job/browse/forme/limit/100";
-   var ApiProfile = IP+"/profile/my";
-   var ApiProfileupdate = IP+"/profile/my/update";
-   var ApiTerm = IP+"/terms";
-   var ApiFaq = IP+"/faq";
-   var ApiReferralMy = IP+"/referral/code/my";
-
+//var IP = "http://128.199.114.161:128/";
+var IP = "http://192.168.2.202:128/";
+var ApiLogin=IP+"/login/";
+var ApiLoginFacebook=IP+"/login/facebook";
+var ApiRegister=IP+"/signup";
+var ApiCheckUsername=IP+"/checkingvalue/username/{{username}}";
+var ApiForgetPassword=IP+"/needhelp/recovery/password";
+var ApiSetPassword=IP+"/needhelp/confirmation/recovery/password";
+var ContactUs=IP;
+var FAQ=IP;
+var ApiBrowseJob=IP+"/job/browse/forme/limit/100";
+var ApiProfile = IP+"/profile/my";
+var ApiProfileupdate = IP+"/profile/my/update";
+var ApiTerm = IP+"/terms";
+var ApiFaq = IP+"/faq";
+var ApiReferralMy = IP+"/referral/code/my";
+var ApiUploadPhoto = IP+"/beforeactivation/photo_profile/upload";
+var ApiConfirmGet = IP+"/activation/confirm/"+Key!
+var ApiConfirm = IP+"/activation/confirm/"
 /* End Api */
 
 /* function Detect Device Version Iphone */

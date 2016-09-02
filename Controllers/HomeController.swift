@@ -17,7 +17,7 @@ import SwiftyJSON
 import RealmSwift
 
 
- class HomeController: UIViewController, FBSDKLoginButtonDelegate,UITableViewDataSource, UITableViewDelegate
+class HomeController: UIViewController, FBSDKLoginButtonDelegate,UITableViewDataSource, UITableViewDelegate
 {
     
     /* Variabel */
@@ -27,7 +27,6 @@ import RealmSwift
     @IBOutlet var PlusviewOpen: UIView!
     @IBOutlet var PlusviewHide: UIView!
     @IBOutlet var viewEdit: UIView!
-    @IBOutlet var viewPlus: UIView!
     @IBOutlet var viewSearch: UIView!
     
     
@@ -75,7 +74,7 @@ import RealmSwift
         super.viewDidLoad()
         
         self.viewEdit.layer.cornerRadius = self.viewEdit.frame.height/2
-
+        
         let memoryCapacity = 500 * 1024 * 1024
         let diskCapacity = 500 * 1024 * 1024
         let urlCache = NSURLCache(memoryCapacity: memoryCapacity, diskCapacity: diskCapacity, diskPath: "myDiskPath")
@@ -90,7 +89,7 @@ import RealmSwift
         // let navBar = self.navigationController!.navigationBar
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sorting", style: .Plain, target: self, action: #selector(menuRightOpen))
         
-
+        
         CheckInternet()
         getData()
         
@@ -109,7 +108,7 @@ import RealmSwift
     }
     
     func tabBar(){
-    
+        
         let twitterImage = UIImage(named: "twitter_icon.png")!
         let plusImage = UIImage(named: "googleplus_icon.png")!
         
@@ -117,30 +116,51 @@ import RealmSwift
         createJob.action = { item in
             
             print("Create Job...")
+            let vc = createJobController(nibName: "createJob", bundle: nil)
+            var navb = UINavigationController(rootViewController: vc)
+            self.presentViewController(navb, animated:true, completion:nil)
         }
         
         let search = ActionButtonItem(title: "Search", image: plusImage)
         search.action = { item in
             print("search...")
+            let vc = searchJobController(nibName: "searchJob", bundle: nil)
+            var navb = UINavigationController(rootViewController: vc)
+            self.presentViewController(navb, animated:true, completion:nil)
+            
         }
         
         let chat = ActionButtonItem(title: "Chat", image: plusImage)
         chat.action = { item in
             
             print("chat...")
+            let vc = ProfileController(nibName: "Profile", bundle: nil)
+            var navb = UINavigationController(rootViewController: vc)
+            self.presentViewController(navb, animated:true, completion:nil)
+            
         }
         
         
         let photo = ActionButtonItem(title: "Photo", image: plusImage)
         photo.action = { item in
             print("photo...")
-        
+            
+            let vc = ProfileController(nibName: "Profile", bundle: nil)
+            var navb = UINavigationController(rootViewController: vc)
+            self.presentViewController(navb, animated:true, completion:nil)
+            
+            
         }
         
         
         let profile = ActionButtonItem(title: "Profile", image: plusImage)
         profile.action = { item in
-            print("Google Plus...")
+            print("profile")
+            let vc = ProfileController(nibName: "Profile", bundle: nil)
+            var navb = UINavigationController(rootViewController: vc)
+            self.presentViewController(navb, animated:true, completion:nil)
+            
+            
         }
         
         
@@ -149,7 +169,7 @@ import RealmSwift
         actionButton.setTitle("+", forState: .Normal)
         
         actionButton.backgroundColor = UIColor(red: 238.0/255.0, green: 130.0/255.0, blue: 34.0/255.0, alpha:1.0)
-
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -163,11 +183,6 @@ import RealmSwift
         CheckInternet()
     }
     
-    @IBAction func tabOpen(sender: AnyObject) {
-        print("Function open Tab")
-        let vc = TabOpenController(nibName: "TabOpen", bundle: nil)
-        self.presentViewController(vc, animated:true, completion:nil)
-    }
 
     
     override func viewWillDisappear(animated: Bool) {
@@ -196,7 +211,7 @@ import RealmSwift
         
     }
     
-
+    
     @IBAction func showMenuAction(sender: UIButton) {
         let menuVC = storyboard!.instantiateViewControllerWithIdentifier("MenuViewController")
         menuVC.modalPresentationStyle = .Custom
@@ -212,10 +227,13 @@ import RealmSwift
     
     
     func menuRightOpen(){
-        self.sortView.hidden = true
+   
         print("Function MenuRightOpen")
-        self.sortView.hidden = false
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sorting", style: .Plain, target: self, action: #selector(menuRightClose))
+//                self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sorting", style: .Plain, target: self, action: #selector(menuRightClose))
+    
+            let vc = SortingController(nibName: "Sorting", bundle: nil)
+            self.presentViewController(vc, animated:true, completion:nil)
+            
     }
     
     func menuRightClose(){
@@ -285,7 +303,7 @@ import RealmSwift
     func getData(){
         let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
         let Token = prefs.valueForKey("token") as? String
-       
+        
         
         let headersToken = [
             "appid": "4201620",
@@ -300,7 +318,7 @@ import RealmSwift
             // FIXME: you need to handle errors.
             return
         }
-        Alamofire.request(.GET, "http://128.199.114.161:128/job/browse/forme/limit/100", headers:headersToken)
+        Alamofire.request(.GET, ApiBrowseJob, headers:headersToken)
             
             .responseJSON { (response) -> Void in
                 if (response.response!.statusCode == 200 || response.response!.statusCode == 201 ) {
@@ -353,7 +371,7 @@ import RealmSwift
         
         
     }
-
+    
     
     func updateTableView() {
         

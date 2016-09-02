@@ -48,6 +48,27 @@
                                 <rect key="frame" x="110" y="53" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
+<<<<<<< HEAD
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QCT-SS-mPt">
+                                <rect key="frame" x="219" y="493" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="photo">
+                                    <color key="titleColor" red="0.99220126870000003" green="0.98856967689999997" blue="0.97173255680000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Photo:" destination="zYu-1g-fU4" eventType="touchUpInside" id="uMj-Uk-ZxN"/>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QQg-O2-7nN">
+                                <rect key="frame" x="198" y="485" width="102" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Upload Photo">
+                                    <color key="titleColor" red="0.99220126870000003" green="0.98856967689999997" blue="0.97173255680000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Upload:" destination="zYu-1g-fU4" eventType="touchUpInside" id="MoC-Cb-6bA"/>
+>>>>>>> origin/dev
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0039215686269999999" green="0.1450980392" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                     </view>

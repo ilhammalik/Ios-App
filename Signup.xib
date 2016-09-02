@@ -8,7 +8,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignupController" customModule="Pay4date" customModuleProvider="target">
             <connections>
                 <outlet property="birthday" destination="hSJ-yM-gsv" id="dnT-sS-eBW"/>
-                <outlet property="birthday2" destination="7ig-co-ZS9" id="D1y-SY-3Gy"/>
                 <outlet property="ch" destination="MHn-gJ-fCN" id="FzO-Ae-CXr"/>
                 <outlet property="ch2" destination="LXL-1e-RFI" id="YBN-Z5-Xvk"/>
                 <outlet property="ch3" destination="N9O-dG-dWZ" id="6K7-C7-Wmz"/>
@@ -23,15 +22,13 @@
                 <outlet property="firstname" destination="AZS-HY-xJK" id="0XG-yc-wxu"/>
                 <outlet property="gender" destination="c2Q-R8-1Ec" id="jjX-q4-sg5"/>
                 <outlet property="height" destination="0b5-hW-QE4" id="OKC-6s-SpS"/>
-                <outlet property="imageView" destination="zQe-eC-bAT" id="CK9-ID-410"/>
                 <outlet property="lastname" destination="SL4-cL-5UY" id="jA0-YQ-FPB"/>
+                <outlet property="logo" destination="x5F-XX-qpU" id="gpC-fQ-56a"/>
                 <outlet property="next" destination="rlg-op-xZC" id="yTg-9v-hKB"/>
                 <outlet property="password" destination="KT0-KA-hUW" id="qR7-2i-fRt"/>
                 <outlet property="scrolView" destination="Cgg-SQ-aoq" id="qbD-Y1-YA4"/>
                 <outlet property="username" destination="tX1-Fb-Vxh" id="B0j-qo-FXl"/>
                 <outlet property="view" destination="icM-YS-Xs0" id="h8w-4m-dik"/>
-                <outlet property="viewLogin" destination="C3J-XK-Chq" id="Ypg-ua-9gG"/>
-                <outlet property="viewphoto" destination="29t-UH-NTz" id="LuS-rt-5h2"/>
                 <outlet property="weight" destination="Jn0-Y0-WPj" id="Hwd-sL-iOY"/>
             </connections>
         </placeholder>
@@ -48,26 +45,26 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="877"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.jpg" id="x5F-XX-qpU">
-                                    <rect key="frame" x="104" y="21" width="113" height="90"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.jpg" id="x5F-XX-qpU">
+                                    <rect key="frame" x="131" y="34" width="70" height="70"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="        Quickly Log In With :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lxe-dD-zu8">
-                                    <rect key="frame" x="0.0" y="121" width="320" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="        Quickly Log In With :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lxe-dD-zu8">
+                                    <rect key="frame" x="79" y="121" width="168" height="21"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <edgeInsets key="layoutMargins" top="8" left="11" bottom="8" right="8"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or use your Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iLv-V1-3Zd">
-                                    <rect key="frame" x="25" y="189" width="104" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or use your Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iLv-V1-3Zd">
+                                    <rect key="frame" x="79" y="189" width="155" height="21"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="FIrstname" textAlignment="natural" minimumFontSize="17" id="AZS-HY-xJK">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ilham" placeholder="FIrstname" textAlignment="natural" minimumFontSize="17" id="AZS-HY-xJK">
                                     <rect key="frame" x="27" y="240" width="245" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <inset key="insetFor6xAndEarlier" minX="1" minY="0.0" maxX="-1" maxY="0.0"/>
@@ -86,7 +83,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Lastname" textAlignment="natural" minimumFontSize="17" id="SL4-cL-5UY">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="malik" placeholder="Lastname" textAlignment="natural" minimumFontSize="17" id="SL4-cL-5UY">
                                     <rect key="frame" x="27" y="283" width="272" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <inset key="insetFor6xAndEarlier" minX="1" minY="0.0" maxX="-1" maxY="0.0"/>
@@ -143,7 +140,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="KT0-KA-hUW">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ilham123" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="KT0-KA-hUW">
                                     <rect key="frame" x="27" y="410" width="272" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <inset key="insetFor6xAndEarlier" minX="1" minY="0.0" maxX="-1" maxY="0.0"/>
@@ -166,7 +163,7 @@
                                     <rect key="frame" x="280" y="448" width="20" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Height" textAlignment="natural" minimumFontSize="17" id="0b5-hW-QE4">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="90" placeholder="Height" textAlignment="natural" minimumFontSize="17" id="0b5-hW-QE4">
                                     <rect key="frame" x="27" y="449" width="272" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <inset key="insetFor6xAndEarlier" minX="1" minY="0.0" maxX="-1" maxY="0.0"/>
@@ -185,7 +182,7 @@
                                     <rect key="frame" x="280" y="488" width="20" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Weight" textAlignment="natural" minimumFontSize="17" id="Jn0-Y0-WPj">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="90" placeholder="Weight" textAlignment="natural" minimumFontSize="17" id="Jn0-Y0-WPj">
                                     <rect key="frame" x="27" y="487" width="272" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <inset key="insetFor6xAndEarlier" minX="1" minY="0.0" maxX="-1" maxY="0.0"/>
@@ -220,7 +217,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Gender" textAlignment="natural" minimumFontSize="17" id="c2Q-R8-1Ec">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="female" placeholder="Gender" textAlignment="natural" minimumFontSize="17" id="c2Q-R8-1Ec">
                                     <rect key="frame" x="27" y="572" width="272" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <inset key="insetFor6xAndEarlier" minX="1" minY="0.0" maxX="-1" maxY="0.0"/>
@@ -244,7 +241,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <inset key="insetFor6xAndEarlier" minX="0.0" minY="-30" maxX="0.0" maxY="55"/>
                                     <edgeInsets key="layoutMargins" top="21" left="39" bottom="8" right="8"/>
-                                    <state key="normal" title="NEXT"/>
+                                    <state key="normal" title="SIGNUP"/>
                                     <connections>
                                         <action selector="signupTapped:" destination="-1" eventType="touchUpInside" id="GQc-AO-w4V"/>
                                     </connections>
@@ -267,55 +264,10 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkgrey.png" id="O4m-Lm-IHp">
-                                    <rect key="frame" x="280" y="647" width="20" height="20"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                </imageView>
                                 <view contentMode="scaleToFill" id="5MJ-pu-JJJ">
                                     <rect key="frame" x="24" y="691" width="272" height="1"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                </view>
-                                <view hidden="YES" contentMode="scaleToFill" id="29t-UH-NTz">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="697"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.jpg" id="zQe-eC-bAT">
-                                            <rect key="frame" x="18" y="9" width="285" height="128"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WhM-1u-NpH">
-                                            <rect key="frame" x="33" y="193" width="258" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <state key="normal" title="Change Photo"/>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dmY-c7-cgn">
-                                            <rect key="frame" x="111" y="227" width="100" height="45"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <state key="normal" title="Submit"/>
-                                        </button>
-                                        <view hidden="YES" autoresizesSubviews="NO" contentMode="scaleToFill" id="C3J-XK-Chq">
-                                            <rect key="frame" x="0.0" y="-111" width="320" height="725"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hKw-mn-GzQ">
-                                                    <rect key="frame" x="0.0" y="432" width="320" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Login"/>
-                                                </button>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="7ig-co-ZS9">
-                                                    <rect key="frame" x="43" y="357" width="217" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="twitter"/>
-                                                </textField>
-                                            </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

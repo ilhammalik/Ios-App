@@ -414,89 +414,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view hidden="YES" contentMode="scaleToFill" id="tmu-WF-hIs">
-                                <rect key="frame" x="1" y="202" width="319" height="275"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SortYour Job" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c9l-IV-6Ww">
-                                        <rect key="frame" x="114" y="15" width="123" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lates Jobs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="n9M-y5-j04">
-                                        <rect key="frame" x="25" y="52" width="99" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" id="AI9-uF-I8c">
-                                        <rect key="frame" x="25" y="80" width="270" height="1"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="TCV-2v-e3L">
-                                        <rect key="frame" x="248" y="44" width="51" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                    </switch>
-                                    <view contentMode="scaleToFill" id="SJH-Tj-hJX">
-                                        <rect key="frame" x="25" y="123" width="270" height="1"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="rWn-oZ-ZPn">
-                                        <rect key="frame" x="248" y="84" width="51" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                    </switch>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lowest Jobs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wbY-bS-mbQ">
-                                        <rect key="frame" x="25" y="90" width="99" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="RHx-dQ-KNc">
-                                        <rect key="frame" x="245" y="126" width="51" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                    </switch>
-                                    <view contentMode="scaleToFill" id="qyD-y7-Bsm">
-                                        <rect key="frame" x="24" y="161" width="270" height="1"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="highest Jobs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vuT-23-IYB">
-                                        <rect key="frame" x="25" y="134" width="99" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="V3K-V5-75v">
-                                        <rect key="frame" x="242" y="165" width="51" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                    </switch>
-                                    <view contentMode="scaleToFill" id="WAA-es-eaW">
-                                        <rect key="frame" x="24" y="199" width="270" height="1"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jobs Class" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wqq-mX-yHH">
-                                        <rect key="frame" x="25" y="170" width="99" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6HY-ov-g0g">
-                                        <rect key="frame" x="136" y="222" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="OK"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.31892591212437821" green="0.65299879974479536" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <view contentMode="center" semanticContentAttribute="playback" id="pVi-cI-Xuy">
                                 <rect key="frame" x="0.0" y="523" width="320" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
@@ -558,9 +475,9 @@
                         <outlet property="dataHome" destination="3hr-UI-I5W" id="h7p-PM-LWn"/>
                         <outlet property="homeView" destination="r29-XP-fDG" id="cak-jX-YWZ"/>
                         <outlet property="searchDisplayController" destination="1Nh-pX-lqx" id="kXc-OE-cFC"/>
-                        <outlet property="sortView" destination="tmu-WF-hIs" id="Gmy-su-gfr"/>
                         <outlet property="usernameLabel" destination="AeM-WR-xZy" id="OmK-Dx-p3p"/>
                         <outlet property="viewEdit" destination="V2U-hv-Mf1" id="5lX-Zt-qFq"/>
+                        <outlet property="viewSearch" destination="IcN-07-iql" id="TeA-0X-Evc"/>
                         <segue destination="ioe-SW-E3j" kind="push" identifier="showMenuSegue" id="Aky-qp-WGU"/>
                     </connections>
                 </viewController>
@@ -844,9 +761,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SQl-40-Tfh">
-                                <rect key="frame" x="12" y="31" width="20" height="20"/>
+                                <rect key="frame" x="12" y="31" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="ic_menufix.png"/>
+                                <state key="normal" image="icon-cancel.png"/>
                                 <connections>
                                     <action selector="closeMenu:" destination="ioe-SW-E3j" eventType="touchUpInside" id="Vgh-sQ-4jH"/>
                                 </connections>
@@ -1080,7 +997,7 @@
         <image name="checkgrey.png" width="512" height="512"/>
         <image name="download" width="207" height="144"/>
         <image name="ic_menu.png" width="10" height="14"/>
-        <image name="ic_menufix.png" width="44" height="30"/>
+        <image name="icon-cancel.png" width="512" height="512"/>
         <image name="icon-edit.png" width="48" height="48"/>
         <image name="icon-search.png" width="48" height="48"/>
         <image name="logo.jpg" width="207" height="144"/>
