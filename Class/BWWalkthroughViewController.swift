@@ -155,6 +155,15 @@ At the moment it's only used to perform custom animations on didScroll.
         
     }
 
+    @IBAction func Photo(sender: UIButton) {
+        
+        let vc = UploadPhotoController(nibName: "UploadPhoto", bundle: nil)
+        self.presentViewController(vc, animated:true, completion:nil)
+        
+    }
+
+
+    
     override public func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated);
         

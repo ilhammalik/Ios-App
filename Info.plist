@@ -24,6 +24,8 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb1079658238792366</string>
+				<string>cheers</string>
+				<string>cheers://confirm</string>
 			</array>
 		</dict>
 		<dict>

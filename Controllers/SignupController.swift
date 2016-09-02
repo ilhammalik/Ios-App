@@ -32,7 +32,7 @@ class SignupController: UIViewController,UITextFieldDelegate, UINavigationContro
     
     //end checklist
     
-    
+    @IBOutlet var logo: UIImageView!
     @IBOutlet var firstname : UITextField!
     @IBOutlet var lastname : UITextField!
     @IBOutlet var username : UITextField!
@@ -45,11 +45,6 @@ class SignupController: UIViewController,UITextFieldDelegate, UINavigationContro
     @IBOutlet var code : UITextField!
     @IBOutlet weak var next : UIButton!
     @IBOutlet var imageView: UIImageView!
-    @IBOutlet var views : UIView!
-    @IBOutlet var viewphoto : UIView!
-    @IBOutlet var viewLogin : UIView!
-    @IBOutlet var signButton : UIButton!
-    @IBOutlet var birthday2 : UITextField!
     @IBOutlet var scrolView : UIScrollView!
     
     
@@ -96,6 +91,10 @@ class SignupController: UIViewController,UITextFieldDelegate, UINavigationContro
         
         gender.inputView = pickers
         
+        self.logo.layer.cornerRadius = self.logo.frame.height/2
+        self.logo.layer.borderWidth = 5
+        self.logo.layer.masksToBounds = true
+        self.logo.layer.borderColor = UIColor.purpleColor().CGColor
         // Do any additional setup after loading the view, typically from a nib.
         
         //Layout Iphone 4s
@@ -106,7 +105,7 @@ class SignupController: UIViewController,UITextFieldDelegate, UINavigationContro
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
         // dismissKeyboard
         
-
+        
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
@@ -116,14 +115,14 @@ class SignupController: UIViewController,UITextFieldDelegate, UINavigationContro
         
         // navgitaion title
         let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
-      
+        
         //button.addTarget(self, action: #selector(buttonAction), forControlEvents: .TouchUpInside)
         // end navigation title
         
         // scroll
         scrolView.scrollEnabled = true
         // Do any additional setup after loading the view
-        scrolView.contentSize = CGSizeMake(320, 1100)
+        scrolView.contentSize = CGSizeMake(320, 1400)
         // scroll
         navigationBar()
         
@@ -330,10 +329,7 @@ class SignupController: UIViewController,UITextFieldDelegate, UINavigationContro
             alertView.show()
         } else {
             //parameters  Login from UI (User Interface Input)
-            let Login:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-            Login.setInteger(0, forKey: "photo")
-            Login.synchronize()
-            let photo:Int = Login.integerForKey("photo") as Int
+            print("sukses signup")
             
             let parametersRegister = [
                 "name":  Firstname,
@@ -346,11 +342,19 @@ class SignupController: UIViewController,UITextFieldDelegate, UINavigationContro
                 "weight": Weight,
                 "birthday": Birthday,
                 "gender": Gender,
-                "referral_code": code,
+                "referral_code": Code,
+                ]
+
+            let headers = [
+                "appid": AppId,
+                "secretkey": SecretKey,
+                "cache-control": CacheControl,
+                "content-type": ContentType,
+                "Authorization": "Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==",
+                "Accept": "application/json",
                 ]
             
-            
-            Alamofire.request(.POST, ApiRegister,parameters:parametersRegister, headers: headers)
+            Alamofire.request(.POST, ApiRegister, parameters:parametersRegister, headers: headers)
                 .responseJSON { response in
                     // result of response serialization
                     if (response.response!.statusCode == 200 || response.response!.statusCode == 201 ) {
@@ -368,11 +372,12 @@ class SignupController: UIViewController,UITextFieldDelegate, UINavigationContro
                         Login.setObject(result!["data"]!["weight"]!, forKey: "weight")
                         Login.setObject(result!["data"]!["birthday"]!, forKey: "birthday")
                         Login.setObject(result!["data"]!["gender"]!, forKey: "gender")
-                        Login.setInteger(1, forKey: "ISLOGGEDIN")
+                        Login.setObject(result!["data"]!["activation"]!["key"], forKey: "key")
                         Login.synchronize()
-                        let vc = LoginController(nibName: "Login", bundle: nil)
-                        var navb = UINavigationController(rootViewController: vc)
-                        self.presentViewController(navb, animated:true, completion:nil)
+                        
+                        let vc = UploadPhotoController(nibName: "UploadPhoto", bundle: nil)
+                        self.presentViewController(vc, animated:true, completion:nil)
+                        
                         let alertView:UIAlertView = UIAlertView()
                         alertView.title = "Signup Success"
                         alertView.message = "Success Thanks"
@@ -380,6 +385,7 @@ class SignupController: UIViewController,UITextFieldDelegate, UINavigationContro
                         alertView.addButtonWithTitle("OK")
                         alertView.show()
                         print(response.result.value)
+                        
                         
                     }
                     else {
@@ -392,8 +398,7 @@ class SignupController: UIViewController,UITextFieldDelegate, UINavigationContro
                         alertView.addButtonWithTitle("OK")
                         alertView.show()
                     }
-                    let result = response.result.value as? [String : AnyObject]
-                    print(result)
+                   
             }
             
         }
@@ -580,7 +585,7 @@ class SignupController: UIViewController,UITextFieldDelegate, UINavigationContro
                 self.nameLabel.text = "\(firstName!) \(lastName!)"
                 NSLog("Login SUCCESS");
                 print("token fb :",fbAccessToken)
-                self.viewLogin.hidden = false
+               
                 self.loginButton.hidden = true
                 self.nameLabel.hidden = true
                 
@@ -609,30 +614,25 @@ class SignupController: UIViewController,UITextFieldDelegate, UINavigationContro
         let datePicker = UIDatePicker()
         textfield.inputView = datePicker
         datePicker.addTarget(self, action: #selector(SignupController.datePickerValueChanged), forControlEvents: UIControlEvents.ValueChanged)
-        
-        
     }
+    
     func datePickerValueChanged(sender:UIDatePicker) {
         
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "YYYY-MM-d"
+        dateFormatter.dateFormat = "YYYY-MM-dd"
         let strDate = dateFormatter.stringFromDate(sender.date)
         // Finally we set the text of the label to our new string with the date
         birthday.text = strDate
-        birthday2.text = strDate
-        
+//        birthday2.text = strDate
+        print(strDate)
+    
         let NBirthday:NSUserDefaults = NSUserDefaults.standardUserDefaults()
         NBirthday.setObject(String(strDate), forKey: "nbirthday")
         NBirthday.synchronize()
-        
-        let birth = NBirthday.valueForKey("nbirthday") as? String
-        print("tanggal lahirku",String(birth!))
-        
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         birthday.resignFirstResponder()
-        birthday2.resignFirstResponder()
         
         return true
     }
@@ -654,42 +654,7 @@ class SignupController: UIViewController,UITextFieldDelegate, UINavigationContro
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         return data[row]
     }
-    
-    @IBAction func takePhoto(sender: UIButton) {
-        imagePicker =  UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .Camera
-        
-        presentViewController(imagePicker, animated: true, completion: nil)
-    }
-    
-    
-    
-    
-    
-    func takePhotos(sender: UIButton) {
-        imagePicker =  UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .Camera
-        
-        presentViewController(imagePicker, animated: true, completion: nil)
-    }
-    
-    
-    
-    
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        self.viewphoto.hidden = false
-        loginButton.hidden = true
-        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            imageView.contentMode = .ScaleAspectFit
-            imageView.image = pickedImage
-            imageView =  UIImageView(frame:CGRectMake(1000, 1000, 1000, 1000))
-            
-        }
-        
-        dismissViewControllerAnimated(true, completion: nil)
-    }
+
     
     func CheckInternet(){
         if Reachability.isConnectedToNetwork() == true {
@@ -708,7 +673,7 @@ class SignupController: UIViewController,UITextFieldDelegate, UINavigationContro
     }
     
     
-
+    
     func keyboardWillShow(sender: NSNotification) {
         let userInfo: [NSObject : AnyObject] = sender.userInfo!
         
@@ -718,7 +683,9 @@ class SignupController: UIViewController,UITextFieldDelegate, UINavigationContro
         if keyboardSize.height == offset.height {
             if self.view.frame.origin.y == 0 {
                 UIView.animateWithDuration(0.1, animations: { () -> Void in
-                    self.view.frame.origin.y -= keyboardSize.height
+                    self.view.frame.origin.y -= 200
+                    print("key")
+                    print(keyboardSize.height)
                 })
             }
         } else {
@@ -728,12 +695,12 @@ class SignupController: UIViewController,UITextFieldDelegate, UINavigationContro
         }
         print(self.view.frame.origin.y)
     }
-
+    
     
     func keyboardWillHide(sender: NSNotification) {
         let userInfo: [NSObject : AnyObject] = sender.userInfo!
         let keyboardSize: CGSize = userInfo[UIKeyboardFrameBeginUserInfoKey]!.CGRectValue.size
-        self.view.frame.origin.y += keyboardSize.height
+        self.view.frame.origin.y += 200
     }
-
+    
 }
