@@ -11,6 +11,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+<<<<<<< HEAD
 class UploadPhotoController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate   {
     
     @IBOutlet var imageView: UIImageView!
@@ -18,29 +19,48 @@ class UploadPhotoController: UIViewController,UIImagePickerControllerDelegate,UI
     @IBOutlet var take : UIButton!
     @IBOutlet var submit : UIButton!
     @IBOutlet var retake : UIButton!
+=======
+class UploadPhotoController: UIViewController,UIImagePickerControllerDelegate   {
+    
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var views : UIView!
+    @IBOutlet var submit : UIButton!
+    @IBOutlet var retake : UIButton!
+    
+>>>>>>> origin/dev
     var imagePicker: UIImagePickerController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+<<<<<<< HEAD
         retake.hidden = true
         self.views.layer.cornerRadius = self.views.frame.height/2
         self.imageView.layer.cornerRadius = self.imageView.frame.height/2
  
+=======
+   
+>>>>>>> origin/dev
         
     }
     
     @IBAction func takePhoto(sender: UIButton) {
+<<<<<<< HEAD
 
         
         imagePicker =  UIImagePickerController()
         imagePicker.sourceType = .Camera
         imagePicker.cameraDevice = .Front
         imagePicker.delegate = self
+=======
+        imagePicker =  UIImagePickerController()
+        imagePicker.sourceType = .Camera
+>>>>>>> origin/dev
         
         presentViewController(imagePicker, animated: true, completion: nil)
     }
     
+<<<<<<< HEAD
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         self.take.hidden = true
@@ -103,6 +123,19 @@ class UploadPhotoController: UIViewController,UIImagePickerControllerDelegate,UI
     }
     
 
+=======
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageView.contentMode = .ScaleAspectFit
+            imageView.image = pickedImage
+            imageView =  UIImageView(frame:CGRectMake(1000, 1000, 1000, 1000))
+            
+        }
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+>>>>>>> origin/dev
     
     
 }

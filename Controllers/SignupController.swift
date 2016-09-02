@@ -48,7 +48,7 @@ class SignupController: UIViewController,UITextFieldDelegate, UINavigationContro
     @IBOutlet var scrolView : UIScrollView!
     
     
-    var data = ["male", "female"]
+    var data = ["Male", "Female"]
     var pickers = UIPickerView()
     
     
